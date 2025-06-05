@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoVision: Waste Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="{{ url_for('static', filename='recycle-icon.png') }}" alt="Recycle" class="icon">
+            <h1>EcoVision: Waste Classification</h1>
+            <p class="subtitle">Upload a waste image to classify it and learn how to dispose of it properly.</p>
+        </header>
+
+        <main class="main-content">
+            <section class="upload-box">
+                <form action="/upload" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="file" required>
+                    <button type="submit">Classify Waste</button>
+                </form>
+            </section>
+
+            <section class="awareness-card">
+                <h2>🌱 Why Waste Classification Matters</h2>
+                <ul>
+                    <li>💡 Over <strong>3.5 million tons</strong> of waste are produced daily worldwide.</li>
+                    <li>♻️ Proper segregation improves <strong>recycling efficiency by 70%</strong>.</li>
+                    <li>🗑️ Biodegradable waste can be <strong>composted instead of landfilled</strong>.</li>
+                    <li>🌍 Let's all play a role in a <strong>cleaner, greener future</strong>.</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
